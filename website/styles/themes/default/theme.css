@@ -1,0 +1,25 @@
+:root {
+	font-size: 16pt;
+}
+
+[font] {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0.25em 0.5em;
+	margin: 0 0.25em;
+	user-select: none;
+	white-space: normal;
+	font-size: 1rem;
+}
+
+[font~="center"] { text-align: center; }
+[font~="button"] { color: #bbbbbb; }
+[font~="button"]:hover { color: var(--blessed); font-weight: bold; }
+[font~="heading"] { font-size: 1.5rem; font-weight: bold; }
+[font~="title"] { font-size: 2rem; font-weight: bold; }
+
+/** -Button */
+[button][font] { color:#bbbbbb }
+[button] > [font] { color:#bbbbbb }
+[button]:hover { background-color: #191919; }
+[button]:hover[font] { color:#ffffff }
+[button]:hover > :not([button])[font] { color:#ffffff }

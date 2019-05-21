@@ -1,0 +1,23 @@
+{
+	"name": "unkn-game",
+	"version": "0.1.0",
+	"description": "Nethack based multiplayer game",
+	"main": "./app/App.js",
+	"scripts": {
+		"start": "electron .",
+		"test": "./test/Test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Mahov-Sven/Unkn-Game.git"
+	},
+	"author": "Ethan Penn",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Mahov-Sven/Unkn-Game/issues"
+	},
+	"homepage": "https://github.com/Mahov-Sven/Unkn-Game#readme",
+	"devDependencies": {
+		"electron": "^3.0.12"
+	}
+}
