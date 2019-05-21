@@ -24,8 +24,8 @@ export default class Tab extends Component{
 		this._tabName = name;
 
 		const tabName = new Component();
-		tabName.flex("static");
-		tabName.font("center");
+		tabName.flex("dynamic");
+		tabName.font();
 		tabName.text(this._tabName);
 
 		this.append(tabName);

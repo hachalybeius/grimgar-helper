@@ -26,6 +26,13 @@ export default class Component {
 		else this._elem = elem;
 	}
 
+	_constructFiller(parentComp=this){
+		const filler = new Component();
+		filler.flex("dynamic")
+		parentComp.append(filler);
+		return filler;
+	}
+
 	attachEvents(){}
 
 	append(comp){

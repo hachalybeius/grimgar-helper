@@ -15,7 +15,8 @@ export default class Page extends Component{
 	}
 
 	_constructRoot(){
-		this._elem = $("#Page");
+		console.log(this._elem)
+		this._elem = $("#Framework");
 		this._banner = this.findId("Banner");
 		this._content = this.findId("Content");
 	}
@@ -32,7 +33,7 @@ export default class Page extends Component{
 	openTab(location){
 		// TODO: get the data from the location
 		// then give the name of the page to the tab
-		const tabName = locaiton;
+		const tabName = location;
 		this._createTab(tabName);
 	}
 

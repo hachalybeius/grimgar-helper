@@ -1,5 +1,5 @@
 // DO NOT REMOVED UTIL HAS IT SETS GLOBALS
-import Util from "./scripts/Util.js";
+import * as Util from "./scripts/Util.js"
 import Loader from "./scripts/Loader.js";
 import GrimgarHelper from "./scripts/GrimgarHelper.js"
 

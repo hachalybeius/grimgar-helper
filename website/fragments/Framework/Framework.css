@@ -14,6 +14,7 @@
 .Tab {
 	background-color: #333333;
 	margin: 0.25em;
+	width: 8rem;
 }
 
 .TabClose {

@@ -12,10 +12,7 @@
 }
 
 [font~="center"] { text-align: center; }
-[font~="button"] { color: #bbbbbb; }
-[font~="button"]:hover { color: var(--blessed); font-weight: bold; }
-[font~="heading"] { font-size: 1.5rem; font-weight: bold; }
-[font~="title"] { font-size: 2rem; font-weight: bold; }
+[font][flex~="dynamic"] { overflow: hidden; text-overflow: ellipsis; }
 
 /** -Button */
 [button][font] { color:#bbbbbb }
