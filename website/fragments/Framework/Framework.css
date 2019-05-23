@@ -4,12 +4,26 @@
 
 #Banner {
 	background-color: #222222;
+	height: 2.15rem;
 }
 
 #Content {
 	margin: 0.25em;
 	background-color: #333333;
 }
+
+.MenuOption {
+	width: 8em;
+}
+
+.MenuOptionList {
+	width: 8em;
+	background-color: #444444;
+	display: none;
+}
+
+.MenuOption:hover .MenuOptionList { display: inherit }
+.MenuOptionList > :hover { background-color: #333333 }
 
 .Tab {
 	background-color: #333333;

@@ -1,8 +1,8 @@
 export default class Component {
 	constructor(...args){
-		/** @type Element */
+		/** @type {Element} */
 		this._parent = undefined;
-		/** @type Element */
+		/** @type {Element} */
 		this._elem = undefined;
 		this.init(...args);
 		this.construct(...args);
@@ -47,9 +47,12 @@ export default class Component {
 	}
 
 	attr(attrName, attrValue, add=false){
-		if(attrValue === undefined) return this._elem.getAttribute(attrName);
-		else if(!add) this._elem.setAttribute(attrName, attrValue);
-		else this._elem.setAttribute(attrName, `${this._elem.getAttribute(attrName)} ${attrValue}`);
+		if(attrValue === undefined)
+			return this._elem.getAttribute(attrName);
+		else if(add && this._elem.getAttribute(attrName) !== null)
+			this._elem.setAttribute(attrName, `${this._elem.getAttribute(attrName)} ${attrValue}`);
+		else
+			this._elem.setAttribute(attrName, attrValue);
 	}
 
 	clear(){
@@ -117,6 +120,14 @@ export default class Component {
 		this.attr("font", args.join(" "));
 	}
 
+	foreground(){
+		this.css("z-index", "2");
+	}
+
+	front(){
+		this.css("z-index", "1");
+	}
+
 	full(){
 		this.addClass("FullContainer");
 	}
@@ -148,6 +159,10 @@ export default class Component {
 
 	perspective(){
 		this.css("perspective", "1000px");
+	}
+
+	remove(){
+		this._elem.remove();
 	}
 
 	removeClass(className){

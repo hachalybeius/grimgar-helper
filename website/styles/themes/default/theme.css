@@ -11,6 +11,7 @@
 	font-size: 1rem;
 }
 
+[font~="left"]{ text-align: left; }
 [font~="center"] { text-align: center; }
 [font][flex~="dynamic"] { overflow: hidden; text-overflow: ellipsis; }
 

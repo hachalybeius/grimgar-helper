@@ -1,15 +1,19 @@
 import Component from "../Component.js";
+import Page from "./Page.js";
 
 export default class Tab extends Component{
 	constructor(...args){
 		super(...args);
-		/** @type String */
-		this._tabName;
+	}
+
+	init(name){
+		/** @type {string} */
+		this._name = name;
 	}
 
 	construct(name){
 		this._constructRoot();
-		this._constructTabName(name);
+		this._constructTabName();
 		this._constructTabClose();
 	}
 
@@ -20,13 +24,11 @@ export default class Tab extends Component{
 		this.addClass("Tab");
 	}
 
-	_constructTabName(name){
-		this._tabName = name;
-
+	_constructTabName(){
 		const tabName = new Component();
 		tabName.flex("dynamic");
 		tabName.font();
-		tabName.text(this._tabName);
+		tabName.text(this._name);
 
 		this.append(tabName);
 	}
@@ -38,8 +40,9 @@ export default class Tab extends Component{
 		tabClose.attr("button", "");
 		tabClose.addClass("TabClose");
 		tabClose.text("+");
-
-		// TODO: add on click event
+		tabClose.click(() => {
+			Page.closeTab(this._name)
+		});
 
 		this.append(tabClose);
 	}

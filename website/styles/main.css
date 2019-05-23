@@ -27,6 +27,7 @@ body {
 }
 
 /** -Scroll */
+[scroll] { overflow-x: hidden; overflow-y: hidden; }
 [scroll~="x"] { overflow-x: auto }
 [scroll~="y"] { overflow-y: auto }
 
