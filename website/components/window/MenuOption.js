@@ -1,5 +1,5 @@
 import Component from "../Component.js";
-import Page from "../page/Page.js";
+import Window from "./Window.js";
 
 import PageLocations from "../../scripts/pages/PageLocations.js";
 
@@ -30,9 +30,10 @@ export default class MenuOption extends Component{
 		const option = new Component();
 		option.flex("static");
 		option.font("left");
+		option.attr("button", "");
 		option.text(optionName);
 		option.click(() => {
-			Page.openTab(`${this._name}.${optionName}`);
+			Window.openTab(`${this._name}.${optionName}`);
 		});
 
 		return option;
@@ -46,9 +47,10 @@ export default class MenuOption extends Component{
 		const optionContainer = new Component();
 		optionContainer.flex("column", "static");
 		optionContainer.addClass("MenuOptionList");
+		optionContainer.css("border-bottom", "0.25em solid #111111");
 		optionContainer.foreground();
 
-		for(const optionName of PageLocations.get(this._name)){
+		for(const optionName of PageLocations.getPages(this._name)){
 			const option = this._constructOption(optionName);
 			optionContainer.append(option);
 		}

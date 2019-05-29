@@ -1,5 +1,5 @@
 import Component from "../Component.js";
-import Page from "./Page.js";
+import Window from "./Window.js";
 
 export default class Tab extends Component{
 	constructor(...args){
@@ -11,7 +11,7 @@ export default class Tab extends Component{
 		this._name = name;
 	}
 
-	construct(name){
+	construct(){
 		this._constructRoot();
 		this._constructTabName();
 		this._constructTabClose();
@@ -29,6 +29,9 @@ export default class Tab extends Component{
 		tabName.flex("dynamic");
 		tabName.font();
 		tabName.text(this._name);
+		tabName.click(() => {
+			Window.setActivePage(this._name);
+		});
 
 		this.append(tabName);
 	}
@@ -41,7 +44,7 @@ export default class Tab extends Component{
 		tabClose.addClass("TabClose");
 		tabClose.text("+");
 		tabClose.click(() => {
-			Page.closeTab(this._name)
+			Window.closeTab(this._name)
 		});
 
 		this.append(tabClose);

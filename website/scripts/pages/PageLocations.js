@@ -9,7 +9,16 @@ export default class PageLocations {
 		}
 	}
 
-	static get(name){
+	static getLocation(name){
+		for(const locationTag in PageLocations._locations){
+			for(const pageName of PageLocations.getPages(locationTag)){
+				if(pageName === name)
+					return `${locationTag}.${pageName}`;
+			}
+		}
+	}
+
+	static getPages(name){
 		return PageLocations._locations[name];
 	}
 

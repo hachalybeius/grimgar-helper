@@ -9,10 +9,12 @@
 	user-select: none;
 	white-space: normal;
 	font-size: 1rem;
+	color: #e4a837;
 }
 
 [font~="left"]{ text-align: left; }
 [font~="center"] { text-align: center; }
+[font~="heading"] { color:#cccccc }
 [font][flex~="dynamic"] { overflow: hidden; text-overflow: ellipsis; }
 
 /** -Button */

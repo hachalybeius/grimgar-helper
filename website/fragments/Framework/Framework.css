@@ -7,7 +7,7 @@
 	height: 2.15rem;
 }
 
-#Content {
+#Page:not(:empty) {
 	margin: 0.25em;
 	background-color: #333333;
 }
