@@ -18,6 +18,6 @@
 	},
 	"homepage": "https://github.com/Mahov-Sven/Unkn-Game#readme",
 	"devDependencies": {
-		"electron": "^3.0.12"
+		"electron": "^9.4.0"
 	}
 }
